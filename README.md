@@ -1,4 +1,4 @@
 # Internet-Programming
 <ol>
-  <li> <a href="/Calculator">Calculator UI</a></li>
+  <li> <a href="Calci">Calculator UI</a></li>
  </ol>

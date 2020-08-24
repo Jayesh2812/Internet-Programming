@@ -14,7 +14,7 @@ body{
     transform: translate(-50%,-50%);
     display:grid;
     grid-template-columns:  repeat(4,minmax(50px,100px));
-    grid-template-rows:repeat(5,50px) ;
+    grid-template-rows: 60px repeat(4,50px) ;
     /* background:red; */
 
     gap:10px;
@@ -24,23 +24,23 @@ body{
 input{
     grid-column: 1/-1;
     width:100%;
-    border-radius: 10px;
+    border-radius: 7px;
     outline:none;
     border:0;
     padding:0 1em;
     font-weight: 700;
     font-size: 1.3em;
+    box-shadow: 0px 0 50px 5px rgba(219 ,144, 4 ,.28);
+    user-select: none;
 }
-span{
+button{
     background: linear-gradient(45deg,rgb(219, 144, 4),orange);
-    display:flex;
-    justify-content: center;
-    align-items: center;
+
+    border:0;
     border-radius: 5px;
     user-select: none;
     cursor: pointer;
     font-weight: 700;
     font-size: 1.5em;
-
-
+    outline:none;
 }

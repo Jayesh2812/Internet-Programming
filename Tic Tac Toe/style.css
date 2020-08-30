@@ -35,3 +35,8 @@ div{
     min-height:100px;
     background: lightblue;
 }
+div{
+    font-size:7em;
+    font-weight:900;
+    color: #303030;
+}

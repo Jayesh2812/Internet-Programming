@@ -1,4 +1,5 @@
 let p = document.querySelectorAll('.p')
+let section = document.getElementById("ttt")
 let board;
 let positions;
 let turn;
@@ -28,6 +29,7 @@ function draw(i,j){
 
     // console.log(board)
     board[i][j] = turn == 1?1:2
+    section.classList.toggle('second');
     if(turn==1){
         positions[i][j].innerHTML='X';
     }

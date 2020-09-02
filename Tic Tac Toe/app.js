@@ -9,7 +9,7 @@ function start(){
     [0,0,0],
     [0,0,0]]
     
-    console.log(board)
+    // console.log(board)
     
     positions =[[p[0],p[1],p[2]],
     [p[3],p[4],p[5]],
@@ -49,7 +49,7 @@ function check(){
             sum+=num
         });
     });
-    console.log(sum)
+    // console.log(sum)
     lines(1)
     lines(2)
     if(sum==13){

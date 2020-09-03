@@ -1,4 +1,4 @@
-window.onload=()=>{
+
     title = document.querySelector('title').innerHTML
     header = document.createElement('header')
     header.innerHTML =        
@@ -28,4 +28,3 @@ window.onload=()=>{
     })
 
 
-}

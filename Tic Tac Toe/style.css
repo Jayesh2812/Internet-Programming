@@ -17,7 +17,7 @@ main{
 }
 h1{
     text-align: center;
-    margin-bottom:2em;
+    margin-bottom:1.5em;
     font-size:max(3em,5vw);
     font-weight:900;
     background:linear-gradient(6deg,orange 50%,lightblue 30%);

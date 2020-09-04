@@ -53,7 +53,7 @@ a{
 .burger{
     position: absolute;
     left:2.5vw;
-    top:4.4vh;
+    top:3.5vh;
     padding:1em;
     cursor:pointer;
     transition:.4s ease;
@@ -105,6 +105,6 @@ a{
     }
     .burger{
         left:0;
-        height:3vh;
+        height:3.5vh;
     }
 }

@@ -1,9 +1,8 @@
 window.onload = () => {
-    let p = document.querySelectorAll('.p')
-    let section = document.getElementById("ttt")
-    let board;
-    let positions;
-    let turn;
+    p = document.querySelectorAll('.p')
+    section = document.getElementById("ttt")
+    start()
+}
     function start() {
 
         board = [[0, 0, 0],
@@ -110,5 +109,4 @@ window.onload = () => {
             return false
         }
     }
-    start()
-}
+

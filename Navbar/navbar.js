@@ -6,6 +6,7 @@
         <ul><h3><span> IP Assignments</span></h3>
             <li><a href="../Calci/">Calculator</a></li>
             <li><a href="../Tic Tac Toe/">Tic Tac Toe</a></li>
+            <li><a href="../Tic Tac Toe AI/">Tic Tac Toe AI</a></li>
         </ul>
 
     </nav>
@@ -17,7 +18,7 @@
     link.setAttribute('rel',"stylesheet")
     link.setAttribute('href','../Navbar/navbar.css')
     document.querySelector("head").appendChild(link)
-    document.body.appendChild(header)
+    document.body.insertBefore(header,document.body.childNodes[0])
 
 
     

@@ -152,7 +152,7 @@ window.onload = () => {
     }
 
 
-    setInterval(draw,100)
+    setInterval(draw,10)
     start()
 
 }

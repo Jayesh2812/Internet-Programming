@@ -41,3 +41,9 @@ h1{
     font-size:max(3em,5vw);
     font-weight:900;
 }
+.X{
+    background:red;
+}
+.O{
+    background:blue;
+}

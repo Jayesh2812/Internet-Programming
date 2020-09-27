@@ -1,6 +1,9 @@
 window.onload = () => {
 
     // Matrix board representation
+    let board 
+    let turn 
+    let available
     start =()=>{
         board = [
             ['','',''],
@@ -9,19 +12,8 @@ window.onload = () => {
         ]
         turn = 'X'
         available=[]
-    }
-    let board 
-    let turn 
-    let available
-    function updateAvailable(){
-        available = []
-        for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < 3; j++) {
-                if(!board[i][j] != ''){
-                    available.push([i,j])
-                }
-            }
-        }
+        draw()
+
 
     }
     function changeturn() {
@@ -49,10 +41,14 @@ window.onload = () => {
                     draw()
                     changeturn()
                     // randomAI()
-                    minimax()
+                    if(!check()){
+                        
+                        bestMove()
+                        check()
+                    }
+                    // check()
                     draw()
                 }
-                setTimeout(check,100)
             })
         }
     }
@@ -63,52 +59,68 @@ window.onload = () => {
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
                 let cell = cells[i][j]
-                if(!board[i][j] != ''){
+                if(board[i][j] == ''){
                     available.push([i,j])
                 }
                 cell.innerHTML = board[i][j]
+                // console.log(cell)
+                // check()
 
 
             }
         }
     }
 
-    check=()=>{
+    check=(alertUser = true)=>{
         for (let i = 0; i < 3; i++) {
             if(isEqual(board[i][0], board[i][1], board[i][2])){
-                alert(`Player ${board[i][0]} wins`)
-                start()
-                return 
+                // alert(`Player ${board[i][0]} wins`)
+                if(alertUser){
+                    setTimeout(()=>{alert(`Player ${board[i][0]} wins`);start()},100)
+
+                }
+                return board[i][0]
             }
         }
         for (let i = 0; i < 3; i++) {
             if(isEqual(board[0][i], board[1][i], board[2][i])){
-                alert(`Player ${board[0][i]} wins`)
-                start()
-                return
+                // alert(`Player ${board[0][i]} wins`)
+                if(alertUser){
+                    setTimeout(()=>{alert(`Player ${board[0][i]} wins`);start()},100)
+
+                }
+                return board[0][i]
             }
         }
         if(isEqual(board[0][0], board[1][1], board[2][2])){
-            alert(`Player ${board[0][0]} wins`)
-            start()
-            return
+            if(alertUser){
+                setTimeout(()=>{alert(`Player ${board[0][0]} wins`);start()},100)
+
+            }
+            return board[0][0]
         }
 
         if(isEqual(board[2][0], board[1][1], board[0][2])){
-            alert(`Player ${board[2][0]} wins`)
-            start()
-            return
+            if(alertUser){
+                setTimeout(()=>{alert(`Player ${board[2][0]} wins`);start()},100)
+
+            }
+            return board[2][0]
 
         }
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
                 if(board[i][j] == ''){
-                    return
+                    return null
                 }
             }
         }
-        alert("Game Tied")
-        start()
+        
+        if(alertUser){
+            setTimeout(()=>{alert("Game Tied");start()},100)
+
+        }
+        return "Tie"
 
 
     }
@@ -126,33 +138,76 @@ window.onload = () => {
         }
 
     }
-    minimax =()=>{
-        let s
-        let finalSpot = available[0]
-        for (let index = 0; index < available.length; index++) {
-            const spot = available[index];
-            if(s < score(spot)  ){
-                s = score(spot)
-                finalSpot = spot
-
+    bestMove =()=>{
+        if(available.length){
+            let s = -1
+            let finalSpot =[0,0]
+            for (let index = 0; index < available.length; index++) {
+                const spot = available[index];
+                board[spot[0]][spot[1]] = turn;
+                let score = minimax(board, false)
+                board[spot[0]][spot[1]] = '';
+                
+                if(s < score){
+                    s = score
+                    finalSpot = spot
+                }
             }
-            if(s==1){
-                break;
+            let i = finalSpot[0]
+            let j = finalSpot[1]
+            board[i][j] = turn
+            changeturn()
+        }
+    }
+    function minimax(board, isMaximizing){
+        result = check(false)
+        if (result){
+            if(result == 'X'){
+                return -1
+            }
+            if(result == 'O'){
+                return 1
+            }
+            else{
+                return 0
             }
         }
-        let i = finalSpot[0]
-        let j = finalSpot[1]
-        board[i][j] = 'O'
-        changeturn()
+        if(isMaximizing){
+            let s = -1
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if(board[i][j] == ''){
+                        board[i][j] = "O"
+                        let score = minimax(board, false)
+                        s = Math.max(s,score)
+                        board[i][j] = ""
+
+
+                    }
+                }
+            }
+            return s;
+        }
+        else{
+            let s = 1
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if(board[i][j] == ''){
+                        board[i][j] = "X"
+                        let score = minimax(board, true)
+                        s = Math.min(s,score)
+                        board[i][j] = ""
+                    }
+                }
+            }
+            return s;
+        }
     }
-    score = (spot)=>{
-
-        return 1
-
-    }
 
 
-    setInterval(draw,10)
+    // setInterval(draw,1)
     start()
+    // bestMove()
+    // draw()
 
 }

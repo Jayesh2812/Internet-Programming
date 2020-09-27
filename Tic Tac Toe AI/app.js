@@ -135,10 +135,11 @@ window.onload = () => {
         if(available.length){
             let s = -1
             let finalSpot =[0,0]
+            let depth = 0
             for (let index = 0; index < available.length; index++) {
                 const spot = available[index];
                 board[spot[0]][spot[1]] = turn;
-                let score = minimax(board, false)
+                let score = minimax(board, false, depth)
                 board[spot[0]][spot[1]] = '';
                 
                 if(s < score){
@@ -152,7 +153,7 @@ window.onload = () => {
             changeturn()
         }
     }
-    function minimax(board, isMaximizing){
+    function minimax(board, isMaximizing, depth){
         result = check(false)
         if (result){
             if(result == 'X'){
@@ -171,7 +172,7 @@ window.onload = () => {
                 for (let j = 0; j < 3; j++) {
                     if(board[i][j] == ''){
                         board[i][j] = "O"
-                        let score = minimax(board, false)
+                        let score = minimax(board, false, depth+1)
                         s = Math.max(s,score)
                         board[i][j] = ""
 
@@ -187,7 +188,7 @@ window.onload = () => {
                 for (let j = 0; j < 3; j++) {
                     if(board[i][j] == ''){
                         board[i][j] = "X"
-                        let score = minimax(board, true)
+                        let score = minimax(board, true,depth+1)
                         s = Math.min(s,score)
                         board[i][j] = ""
                     }

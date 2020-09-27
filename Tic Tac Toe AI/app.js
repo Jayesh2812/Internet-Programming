@@ -70,7 +70,6 @@ window.onload = () => {
             }
         }
     }
-
     check=(alertUser = true)=>{
         for (let i = 0; i < 3; i++) {
             if(isEqual(board[i][0], board[i][1], board[i][2])){
@@ -87,7 +86,6 @@ window.onload = () => {
                 // alert(`Player ${board[0][i]} wins`)
                 if(alertUser){
                     setTimeout(()=>{alert(`Player ${board[0][i]} wins`);start()},100)
-
                 }
                 return board[0][i]
             }
@@ -99,14 +97,12 @@ window.onload = () => {
             }
             return board[0][0]
         }
-
         if(isEqual(board[2][0], board[1][1], board[0][2])){
             if(alertUser){
                 setTimeout(()=>{alert(`Player ${board[2][0]} wins`);start()},100)
 
             }
             return board[2][0]
-
         }
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
@@ -115,14 +111,11 @@ window.onload = () => {
                 }
             }
         }
-        
         if(alertUser){
             setTimeout(()=>{alert("Game Tied");start()},100)
 
         }
         return "Tie"
-
-
     }
 
     randomAI =()=>{
@@ -203,11 +196,5 @@ window.onload = () => {
             return s;
         }
     }
-
-
-    // setInterval(draw,1)
     start()
-    // bestMove()
-    // draw()
-
 }

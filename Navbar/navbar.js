@@ -7,6 +7,7 @@
             <li><a href="../Calci/">Calculator</a></li>
             <li><a href="../Tic Tac Toe/">Tic Tac Toe</a></li>
             <li><a href="../Tic Tac Toe AI/">Tic Tac Toe AI</a></li>
+            <li><a href="../Login/">Animated Login</a></li>
         </ul>
 
     </nav>
@@ -19,9 +20,7 @@
     link.setAttribute('href','../Navbar/navbar.css')
     document.querySelector("head").appendChild(link)
     document.body.insertBefore(header,document.body.childNodes[0])
-
-
-    
+   
     let burger = document.querySelector('.burger')
     burger.addEventListener('click',()=>{
         burger.classList.toggle('open')

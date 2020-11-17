@@ -27,7 +27,7 @@ document.querySelector("head").appendChild(fontlink1)
 
 let fontlink2 = document.createElement("link")
 fontlink2.setAttribute('rel',"stylesheet")
-fontlink2.setAttribute("href",`"https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"`)
+fontlink2.setAttribute("href","https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap")
 document.querySelector("head").appendChild(fontlink2)
 
 document.body.insertBefore(header,document.body.childNodes[0])

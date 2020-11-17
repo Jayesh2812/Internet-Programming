@@ -1,11 +1,8 @@
-# <a href="https://jayesh2812.github.io/Internet-Programming/">Internet-Programming</a>
-
-
+<h1> <a href="https://jayesh2812.github.io/Internet-Programming/">Internet-Programming</a></h1>
 <ol>
-	<li> <a href="Calci"></a>Calculator</li>
-	<li> <a href="Login"></a>Animated Login</li>
-	<li> <a href="Signup"></a>Animated Sign Up</li>
-	<li> <a href="Tic Tac Toe"></a>Tic Tac Toe</li>
-	<li> <a href="Tic Tac Toe AI"></a>TIC Tac Toe AI</li>
+	<li> <a href="Calci">Calculator</a></li>
+	<li> <a href="Login">Animated Login</a></li>
+	<li> <a href="Signup">Animated Sign Up</a></li>
+	<li> <a href="Tic Tac Toe">Tic Tac Toe</a></li>
+	<li> <a href="Tic Tac Toe AI">TIC Tac Toe AI</a></li>
 </ol>
-

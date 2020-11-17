@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+$D:50em;
+$d:$D / 10 + 0em;
+@mixin ca($delay){
+    & .circle{
+    animation: move 2s infinite alternate ease-in-out $delay ;
+    }
+}
+body{
+    height:100vh;
+    display:grid;
+    place-content: center;
+    background-color: #242424;
+}
+.parent{
+    width:$D;
+    height:$D;
+    border-radius: 50%;
+    background-color: rgba(255, 166, 0, 0.253);
+    display:flex;
+    align-items: center;
+    position: relative;
+    // animation: par 2s infinite alternate 2s;
+}
+@keyframes par{
+    100%{
+    transform: rotate(180deg);
+    }
+}
+.wrapper{
+    width:$D;
+    height:1px;
+    // background-color: grey;
+    display:grid;
+    place-content: center;
+    position: absolute;
+    // transform: translate(-50%,-50%);
+}
+.wrapper{
+    @include ca(0s);
+}
+.wrapper2{
+    transform: rotate(90deg);
+    @include ca(1000ms);
+}
+.wrapper3{
+    transform: rotate(45deg);
+    @include ca(500ms);
+
+}
+.wrapper4{
+    transform: rotate(135deg);
+    @include ca(1500ms);
+}
+.wrapper5{
+    transform: rotate(22.5deg);
+    @include ca(250ms);
+}
+.wrapper6{
+    transform: rotate(112.5deg);
+    @include ca(1250ms);
+}
+.wrapper7{
+    transform: rotate(67.5deg);
+    @include ca(750ms);
+}
+.wrapper8{
+    transform: rotate(157.5deg);
+    @include ca(1750ms);
+}
+.circle{
+    width:$d;
+    height:$d;
+    border-radius: 50%;
+    background-color: orange;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+    opacity:0
+}
+
+
+
+
+@keyframes move{
+    0%{
+    transform:translate(0em + $d / 2em - $D / 2em);
+    opacity:1;
+    }
+    100%{
+    transform:translate(0em + $D / 2em - $d / 2em);
+    opacity:1;
+
+    }
+}

@@ -1,0 +1,163 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-color: #242424;
+}
+
+.parent {
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  background-color: rgba(255, 166, 0, 0.253);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@-webkit-keyframes par {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes par {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.wrapper {
+  width: 50em;
+  height: 1px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  position: absolute;
+}
+
+.wrapper .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 0s;
+          animation: move 2s infinite alternate ease-in-out 0s;
+}
+
+.wrapper2 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.wrapper2 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 1000ms;
+          animation: move 2s infinite alternate ease-in-out 1000ms;
+}
+
+.wrapper3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.wrapper3 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 500ms;
+          animation: move 2s infinite alternate ease-in-out 500ms;
+}
+
+.wrapper4 {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.wrapper4 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 1500ms;
+          animation: move 2s infinite alternate ease-in-out 1500ms;
+}
+
+.wrapper5 {
+  -webkit-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
+}
+
+.wrapper5 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 250ms;
+          animation: move 2s infinite alternate ease-in-out 250ms;
+}
+
+.wrapper6 {
+  -webkit-transform: rotate(112.5deg);
+          transform: rotate(112.5deg);
+}
+
+.wrapper6 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 1250ms;
+          animation: move 2s infinite alternate ease-in-out 1250ms;
+}
+
+.wrapper7 {
+  -webkit-transform: rotate(67.5deg);
+          transform: rotate(67.5deg);
+}
+
+.wrapper7 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 750ms;
+          animation: move 2s infinite alternate ease-in-out 750ms;
+}
+
+.wrapper8 {
+  -webkit-transform: rotate(157.5deg);
+          transform: rotate(157.5deg);
+}
+
+.wrapper8 .circle {
+  -webkit-animation: move 2s infinite alternate ease-in-out 1750ms;
+          animation: move 2s infinite alternate ease-in-out 1750ms;
+}
+
+.circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: orange;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+  opacity: 0;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(-22.5em);
+            transform: translate(-22.5em);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(22.5em);
+            transform: translate(22.5em);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translate(-22.5em);
+            transform: translate(-22.5em);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(22.5em);
+            transform: translate(22.5em);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

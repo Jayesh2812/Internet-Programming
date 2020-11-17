@@ -1,4 +1,4 @@
-<h1> <a href="https://jayesh2812.github.io/Internet-Programming/">Internet-Programming</a></h1>
+# <a href="https://jayesh2812.github.io/Internet-Programming/">Internet-Programming</a>
 <ol>
 	<li> <a href="Ball Illusion">Ball Illusion</a></li>
 	<li> <a href="Calci">Calculator</a></li>

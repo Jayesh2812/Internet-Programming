@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Sign Up</title>    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="../Navbar/navbar.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="submit">
+        <form id="submit__form">
+            <div class="input_section username_section">
+                <label for="submit__username">Username</label>
+                <input type="text" required name="username" autocomplete="off" id="submit__username" class="username">
+            </div>
+
+            <div class="input_section password_section">
+                <label for="submit__password">Password</label>
+                <input type="password" name="password" required id="submit__password" class="password">
+            </div>
+
+            <div class="input_section">
+                <label for="user_email">Email</label>
+                <input type="text" required name="email" id="user_email">
+            </div>
+
+            <div class="input_section">
+                <label for="ph_no">Mobile No.</label>
+                <input type="text" required name="" id="ph_no">
+            </div>
+            <button type="submit" id="form__submit">Sign Up</button>
+            <input type="button" id="google_login" value="Continue with Google">
+            <p>Already have an account .Login <a href="../Login/index.html">here</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -40,11 +40,11 @@ nav h3 span{
     transform:translate(0);
     opacity:1;
 }
-li{
+nav li{
     display:block;
     text-align: center;
 }
-a{
+nav a{
     display:block;
     text-transform:uppercase;
     font-size:1rem;

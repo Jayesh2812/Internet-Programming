@@ -2,9 +2,10 @@
 
 
 <ol>
-  <li> <a href="Calci">Calculator UI</a></li>
-  <li> <a href="Tic Tac Toe">Tic Tac Toe</a></li>
-  <li> <a href="Tic Tac Toe AI">Tic Tac Toe AI</a></li>
-  <li> <a href="Login">Animated Login</a></li>
- </ol>
+	<li> <a href="Calci"></a>Calculator</li>
+	<li> <a href="Login"></a>Animated Login</li>
+	<li> <a href="Signup"></a>Animated Sign Up</li>
+	<li> <a href="Tic Tac Toe"></a>Tic Tac Toe</li>
+	<li> <a href="Tic Tac Toe AI"></a>TIC Tac Toe AI</li>
+</ol>
 

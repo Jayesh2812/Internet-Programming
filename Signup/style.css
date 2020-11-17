@@ -11,7 +11,7 @@ body{
     background: #303030;
     font-family:Raleway;
 }
-.login{
+.submit{
     display:flex;
     min-height:100vh;
     justify-content: center;
@@ -26,7 +26,7 @@ form{
     padding: 2.5rem 1.5rem;
     border-radius: 1rem;
 }
-.username_section, .password_section{
+.input_section{
     display:flex;
     flex-direction:column;
 }
